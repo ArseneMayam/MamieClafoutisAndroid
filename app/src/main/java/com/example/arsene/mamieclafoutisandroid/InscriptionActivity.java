@@ -48,7 +48,7 @@ public class InscriptionActivity extends Activity {
         bttnSoumettreInscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+
             }
         });
 
