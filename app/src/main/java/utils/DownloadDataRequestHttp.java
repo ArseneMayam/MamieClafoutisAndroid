@@ -17,6 +17,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import services.C;
+
 /**
  * Created by mayammouarangue on 26/11/17.
  */
@@ -33,7 +35,7 @@ public class DownloadDataRequestHttp extends AsyncTask<String,Long,String>{
         HttpURLConnection connection = null;
         StringBuilder sb = new StringBuilder();
 
-        String requestURL = ""; // A REVOIR
+        String requestURL = C.adresseIp; // A COMPLETER
 
         URL url = null;
 

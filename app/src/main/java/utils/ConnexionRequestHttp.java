@@ -22,6 +22,7 @@ import java.net.URL;
 
 
 import entities.Utilisateur;
+import services.C;
 
 /**
  * Created by mayammouarangue on 25/11/17.
@@ -43,7 +44,7 @@ public class ConnexionRequestHttp extends AsyncTask<String, Long, String>{
         HttpURLConnection connection = null;
         StringBuilder sb = new StringBuilder();
 
-        String requestUrl = ""; // A COMPLETER
+        String requestUrl = C.adresseIp; // A COMPLETER
 
         if (strings[2] != null){
 
@@ -112,6 +113,7 @@ public class ConnexionRequestHttp extends AsyncTask<String, Long, String>{
 
                 Utilisateur utilisateur = gson.fromJson(s,Utilisateur.class);
                 Log.d("test","login user "+utilisateur.getUserName());
+
 
                 Intent intent = new Intent();
                 intent.setClass(ctx, BoutiqueActivity.class);
