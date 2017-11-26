@@ -34,6 +34,15 @@ public class Utilisateur {
         this.tokenInscription = tokenInscription;
     }
 
+    public Utilisateur(String userName, String password){
+        this.userName = userName;
+        this.password = password;
+    }
+
+    public Utilisateur(String tokenIdentification){
+        this.tokenIdentification = tokenIdentification;
+    }
+
     //getters and setters
     public int getId() {
         return id;
