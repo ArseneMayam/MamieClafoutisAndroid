@@ -3,7 +3,7 @@ package com.example.arsene.mamieclafoutisandroid;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class vente extends Activity {
+public class Vente extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
