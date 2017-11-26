@@ -28,6 +28,16 @@ public class Produit {
         this.reference = reference;
     }
 
+    public Produit(int id, String nom, int categorie_id, String description, Float prix, String url_image) {
+        //constructeur produit pour affichage de l'activity produit
+        this.id = id;
+        this.nom = nom;
+        this.categorie_id = categorie_id;
+        this.description = description;
+        this.prix = prix;
+        this.url_image = url_image;
+    }
+
     // getters and setters
     public int getId() {
         return id;
