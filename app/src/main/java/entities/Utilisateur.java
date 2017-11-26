@@ -34,6 +34,17 @@ public class Utilisateur {
         this.tokenInscription = tokenInscription;
     }
 
+
+    public Utilisateur(int id, String nom, String prenom, int etablissement_id, int role_id) {
+        //constructeur pour affichage du nom dans l'activity si on le souhaite
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.etablissement_id = etablissement_id;
+        this.role_id = role_id;
+    }
+
+
     public Utilisateur(String userName, String password){
         this.userName = userName;
         this.password = password;
