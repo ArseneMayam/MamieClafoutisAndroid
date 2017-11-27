@@ -8,35 +8,19 @@ public class Produit {
     //attributs
     private int id;
     private String nom;
-    private int categorie_id;
+    private Categorie categorie;
     private String description;
     private Float prix;
-    private String url_image;
-    private int estvisible;
+    private boolean estVisible;
     private String reference;
+    private Float poid;
+    private Unite unite;
+
 
     //constructeur
 
-    public Produit(int id, String nom, int categorie_id, String description, Float prix, String url_image, int estvisible, String reference) {
-        this.id = id;
-        this.nom = nom;
-        this.categorie_id = categorie_id;
-        this.description = description;
-        this.prix = prix;
-        this.url_image = url_image;
-        this.estvisible = estvisible;
-        this.reference = reference;
-    }
 
-    public Produit(int id, String nom, int categorie_id, String description, Float prix, String url_image) {
-        //constructeur produit pour affichage de l'activity produit
-        this.id = id;
-        this.nom = nom;
-        this.categorie_id = categorie_id;
-        this.description = description;
-        this.prix = prix;
-        this.url_image = url_image;
-    }
+
 
     // getters and setters
     public int getId() {
@@ -55,20 +39,28 @@ public class Produit {
         this.nom = nom;
     }
 
-    public int getCategorie_id() {
-        return categorie_id;
-    }
-
-    public void setCategorie_id(int categorie_id) {
-        this.categorie_id = categorie_id;
-    }
-
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getReference() {
+        return reference;
+    }
+
+    public void setReference(String reference) {
+        this.reference = reference;
+    }
+
+    public Categorie getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
     }
 
     public Float getPrix() {
@@ -79,27 +71,27 @@ public class Produit {
         this.prix = prix;
     }
 
-    public String getUrl_image() {
-        return url_image;
+    public boolean isEstVisible() {
+        return estVisible;
     }
 
-    public void setUrl_image(String url_image) {
-        this.url_image = url_image;
+    public void setEstVisible(boolean estVisible) {
+        this.estVisible = estVisible;
     }
 
-    public int getEstvisible() {
-        return estvisible;
+    public Float getPoid() {
+        return poid;
     }
 
-    public void setEstvisible(int estvisible) {
-        this.estvisible = estvisible;
+    public void setPoid(Float poid) {
+        this.poid = poid;
     }
 
-    public String getReference() {
-        return reference;
+    public Unite getUnite() {
+        return unite;
     }
 
-    public void setReference(String reference) {
-        this.reference = reference;
+    public void setUnite(Unite unite) {
+        this.unite = unite;
     }
 }
