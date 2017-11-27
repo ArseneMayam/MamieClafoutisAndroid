@@ -9,20 +9,21 @@ public class Etablissement {
     private int id;
     private String name;
     private String tel;
-    private int type_id;
-    private int Adresse_int;
+    private Type_Etablissement typeEtablissement;
+    private Adresse adresse;
     private boolean isVisible;
 
     // constructeur
 
-    public Etablissement(int id, String name, String tel, int type_id, int adresse_int, boolean isVisible) {
+    public Etablissement(int id, String name, String tel, Type_Etablissement typeEtablissement, Adresse adresse, boolean isVisible) {
         this.id = id;
         this.name = name;
         this.tel = tel;
-        this.type_id = type_id;
-        Adresse_int = adresse_int;
+        this.typeEtablissement = typeEtablissement;
+        this.adresse = adresse;
         this.isVisible = isVisible;
     }
+
 
     // getters and setters
 
@@ -50,27 +51,27 @@ public class Etablissement {
         this.tel = tel;
     }
 
-    public int getType_id() {
-        return type_id;
-    }
-
-    public void setType_id(int type_id) {
-        this.type_id = type_id;
-    }
-
-    public int getAdresse_int() {
-        return Adresse_int;
-    }
-
-    public void setAdresse_int(int adresse_int) {
-        Adresse_int = adresse_int;
-    }
-
     public boolean isVisible() {
         return isVisible;
     }
 
     public void setVisible(boolean visible) {
         isVisible = visible;
+    }
+
+    public Type_Etablissement getTypeEtablissement() {
+        return typeEtablissement;
+    }
+
+    public void setTypeEtablissement(Type_Etablissement typeEtablissement) {
+        this.typeEtablissement = typeEtablissement;
+    }
+
+    public Adresse getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(Adresse adresse) {
+        this.adresse = adresse;
     }
 }
