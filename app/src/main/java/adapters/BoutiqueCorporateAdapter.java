@@ -28,7 +28,6 @@ public class BoutiqueCorporateAdapter extends ArrayAdapter<Produit>{
         layoutId = resource;
     }
 
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
