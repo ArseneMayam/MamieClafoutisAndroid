@@ -1,16 +1,16 @@
 package com.example.arsene.mamieclafoutisandroid;
 
-import android.app.Activity;
 import android.content.Context;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class connexionActivity extends Activity {
-
+public class BoutiqueActivity extends AppCompatActivity {
     Context ctx;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_connexion);
-        ctx =this;
+        setContentView(R.layout.activity_boutique);
+        ctx = this;
+
     }
 }

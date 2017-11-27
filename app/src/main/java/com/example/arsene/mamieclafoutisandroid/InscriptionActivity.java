@@ -31,6 +31,8 @@ public class InscriptionActivity extends Activity {
         inputPrenom =(EditText) findViewById(R.id.inputPrenom);
         spinnerPoste = (Spinner) findViewById(R.id.spinnerPoste);
 
+
+
         //le button
         bttnSoumettreInscription = (Button) findViewById(R.id.bttnSoumettreInscription);
 
@@ -48,6 +50,17 @@ public class InscriptionActivity extends Activity {
         bttnSoumettreInscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                // validation simple des inputs
+                if (inputNom.getText().toString().length() == 0){
+                    inputNom.setError("Veuillez saisir votre nom");
+                }
+
+                if (inputPrenom.getText().toString().length() == 0){
+                    inputPrenom.setError("Veuillez saisir votre prenom");
+                }
+
+
 
             }
         });
