@@ -25,7 +25,8 @@
         </activity>
         <activity android:name=".ConnexionActivity" />
         <activity android:name=".CommandeActivity" />
-        <activity android:name=".BoutiqueActivity"></activity>
+        <activity android:name=".BoutiqueActivity" />
+        <activity android:name=".BoutiqueCorporate"></activity>
     </application>
 
 </manifest>
