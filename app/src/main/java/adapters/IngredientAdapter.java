@@ -42,6 +42,7 @@ public class IngredientAdapter extends ArrayAdapter<Ingredient> {
 
         TextView ingredienttv = convertView.findViewById(R.id.ingredienttv);
         TextView quantitetv = convertView.findViewById(R.id.quantitetv);
+        TextView descriptiontv = convertView.findViewById(R.id.descriptiontv);
 
 
 
@@ -49,3 +50,23 @@ public class IngredientAdapter extends ArrayAdapter<Ingredient> {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
