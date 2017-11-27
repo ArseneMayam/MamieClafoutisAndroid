@@ -25,6 +25,10 @@ public class Adresse {
         this.pays = pays;
     }
 
+    public Adresse(int id){
+        this.id = id;
+    }
+
     // getters and setters
 
     public int getId() {

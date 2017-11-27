@@ -7,17 +7,20 @@ package entities;
 public class Role {
     // attributs
     private int id;
-    private String denomination;
+    private String titre;
 
     // constructeur
-    public Role(int id, String denomination) {
+
+    public Role(int id) {
         this.id = id;
-        this.denomination = denomination;
     }
 
+    public Role(int id, String titre) {
+        this.id = id;
+        this.titre = titre;
+    }
 
-    // getters  and setters
-
+    // getters et setters
     public int getId() {
         return id;
     }
@@ -26,11 +29,11 @@ public class Role {
         this.id = id;
     }
 
-    public String getDenomination() {
-        return denomination;
+    public String getTitre() {
+        return titre;
     }
 
-    public void setDenomination(String denomination) {
-        this.denomination = denomination;
+    public void setTitre(String titre) {
+        this.titre = titre;
     }
 }

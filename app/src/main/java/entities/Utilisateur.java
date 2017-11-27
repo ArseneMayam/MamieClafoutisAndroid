@@ -5,45 +5,38 @@ package entities;
  */
 
 public class Utilisateur {
-
-
+    
     // attributs
     private int id;
     private String nom;
     private String prenom;
-    private int etablissement_id;
-    private int role_id;
+  //  private int etablissement_id;
+    private Etablissement etablissement;
+    private Role role;
     private String userName;
     private String password;
     private boolean isVisible;
     private String tokenIdentification;
     private String tokenInscription;
 
+
+//private int role_id;
+
     // contructeurs
 
-    public Utilisateur(int id, String nom, String prenom, int etablissement_id, int role_id, String userName, String password, boolean isVisible, String tokenIdentification, String tokenInscription) {
+
+    public Utilisateur(int id, String nom, String prenom, Etablissement etablissement, Role role, String userName, String password, boolean isVisible, String tokenIdentification, String tokenInscription) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
-        this.etablissement_id = etablissement_id;
-        this.role_id = role_id;
+        this.etablissement = etablissement;
+        this.role = role;
         this.userName = userName;
         this.password = password;
         this.isVisible = isVisible;
         this.tokenIdentification = tokenIdentification;
         this.tokenInscription = tokenInscription;
     }
-
-
-    public Utilisateur(int id, String nom, String prenom, int etablissement_id, int role_id) {
-        //constructeur pour affichage du nom dans l'activity si on le souhaite
-        this.id = id;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.etablissement_id = etablissement_id;
-        this.role_id = role_id;
-    }
-
 
     public Utilisateur(String userName, String password){
         this.userName = userName;
@@ -77,22 +70,6 @@ public class Utilisateur {
 
     public void setPrenom(String prenom) {
         this.prenom = prenom;
-    }
-
-    public int getEtablissement_id() {
-        return etablissement_id;
-    }
-
-    public void setEtablissement_id(int etablissement_id) {
-        this.etablissement_id = etablissement_id;
-    }
-
-    public int getRole_id() {
-        return role_id;
-    }
-
-    public void setRole_id(int role_id) {
-        this.role_id = role_id;
     }
 
     public String getUserName() {
@@ -133,5 +110,20 @@ public class Utilisateur {
 
     public void setTokenInscription(String tokenInscription) {
         this.tokenInscription = tokenInscription;
+    }
+    public Etablissement getEtablissement() {
+        return etablissement;
+    }
+
+    public void setEtablissement(Etablissement etablissement) {
+        this.etablissement = etablissement;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 }
