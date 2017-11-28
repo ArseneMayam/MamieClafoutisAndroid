@@ -39,7 +39,8 @@ import entities.Unite;
             public static final String prix = "prix";
             public static final String reference = "reference";
             public static final String poid = "poid";
-            public static final String unite = "unite";
+            public static final String unite_id = "unite_id";
+            public static final String estvisible = "estvisible";
         }
         public static class Utilisateur{
             public static final String tablename = "Utilisateur";

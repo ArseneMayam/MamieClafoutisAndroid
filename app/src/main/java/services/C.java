@@ -6,6 +6,7 @@ package services;
 
 public class C {
     public static String adresseIp="";
+    public static final String nombd = "";
 
 
     public static final class Utilisateur {
