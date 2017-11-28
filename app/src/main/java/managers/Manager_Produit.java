@@ -2,8 +2,10 @@ package managers;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 
 import entities.Produit;
+import services.ConnexionBd;
 import utils.Mydb;
 
 /**
@@ -11,23 +13,25 @@ import utils.Mydb;
  */
 
 public class Manager_Produit {
-    private static final String queryGetAll = "select ...";
+    private static final String queryGetAll = "";
 
     public static void insert(Context ctx, Produit produit) {
         ContentValues cv = new ContentValues();
         cv.put(Mydb.Produit.id, produit.getId());
         cv.put(Mydb.Produit.nom, produit.getNom());
-        //cv.put(Mydb.Produit.categorieid, produit.ca); categorie
+        cv.put(Mydb.Produit.categorieid, produit.getCategorie_id());
         cv.put(Mydb.Produit.description, produit.getDescription());
         cv.put(Mydb.Produit.prix, produit.getPrix());
         cv.put(Mydb.Produit.poid, produit.getPoid());
         cv.put(Mydb.Produit.reference, produit.getReference());
-        //cv.put(Mydb.Produit.unite , produit.getUnite()); unite
+        cv.put(Mydb.Produit.unite_id, produit.getUnite_id());
+        cv.put(Mydb.Produit.estvisible, produit.isEstVisible());
 
-        //SQLiteDatabase bd = Connexiondb.getBd(ctx);
-        //bd.insert(Mydb.Produit.tablename, null, cv);
 
-        //bd.close();
+        SQLiteDatabase bd = ConnexionBd.getBd(ctx);
+        bd.insert(Mydb.Produit.tablename, null, cv);
+
+        bd.close();
     }
 
 
