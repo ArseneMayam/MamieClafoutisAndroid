@@ -31,6 +31,7 @@ public class C {
             public static final String utilisateur_id = "utilisateur_id";
             public static final String quantite = "quantite";
             public static final String etablissement_id = "etablissement_id";
+            public static final String produit_id="produit_id";
             public static final String id = "id";
         }
 
