@@ -44,8 +44,8 @@ public class ConnexionRequestHttp extends AsyncTask<String, Long, String>{
         HttpURLConnection connection = null;
         StringBuilder sb = new StringBuilder();
 
-        String requestUrl = C.adresseIp; // A COMPLETER
-
+        String requestUrl = C.adresseIp+strings[0];
+        Log.d("test",requestUrl);
         if (strings[2] != null){
 
             utilisateur = new Utilisateur(strings[1],strings[2]);
@@ -69,6 +69,8 @@ public class ConnexionRequestHttp extends AsyncTask<String, Long, String>{
             connection.setConnectTimeout(15000);
             connection.setDoInput(true);
             connection.setDoOutput(true);
+            connection.setRequestProperty("Connection","Keep-Alive");
+            connection.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
 
             OutputStream os = connection.getOutputStream();
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
@@ -128,7 +130,6 @@ public class ConnexionRequestHttp extends AsyncTask<String, Long, String>{
             Toast.makeText(ctx, "Erreur de connéxion à la base de donnée.", Toast.LENGTH_LONG).show();
         }
 
-        super.onPostExecute(s);
     }
 }
 
