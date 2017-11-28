@@ -73,7 +73,7 @@ public class GestionBase extends SQLiteOpenHelper {
         bd.execSQL(queryCreateEtablissement);
         bd.execSQL(queryCreateAdresse);
         bd.execSQL(queryCreateType);
-        bd.execSQL(queryCreateRole);
+       // bd.execSQL(queryCreateRole);
         bd.execSQL(queryCreateRoleEtablissement);
     }
 

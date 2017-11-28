@@ -29,7 +29,14 @@ public class Produit {
         this.unite_id = unite_id;
     }
 
-
+    public Produit(String nom, String description, Float prix, String reference, Float poid, int unite_id) {
+        this.nom = nom;
+        this.description = description;
+        this.prix = prix;
+        this.reference = reference;
+        this.poid = poid;
+        this.unite_id = unite_id;
+    }
 
     public int getCategorie_id() {
         return categorie_id;
