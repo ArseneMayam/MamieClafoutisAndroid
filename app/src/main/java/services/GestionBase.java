@@ -1,10 +1,18 @@
 package services;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
 /**
  * Created by Been WhereU on 2017-11-27.
  */
 
-public class GestionBase {
+public class GestionBase extends SQLiteOpenHelper {
+
+    public GestionBase(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, name, factory, version);
+    }
 
     private static final String queryDropEtablissement = "DROP TABLE IF EXISTS" + C.Etablissement.nomTable + ";";
     private static final String queryDropAdresse = "DROP TABLE IF EXISTS" + C.Adresse.nomTable + ";";
@@ -60,5 +68,18 @@ public class GestionBase {
             C.Role_etablissement.type_id + " INTEGER PRIMARY KEY AUTOINCREMENT , " +
             C.Role_etablissement.role_id + " TEXT);";
 
+    @Override
+    public void onCreate(SQLiteDatabase bd) {
+        bd.execSQL(queryCreateEtablissement);
+        bd.execSQL(queryCreateAdresse);
+        bd.execSQL(queryCreateType);
+        bd.execSQL(queryCreateRole);
+        bd.execSQL(queryCreateRoleEtablissement);
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase bd, int i, int i1) {
+
+    }
 }
 
