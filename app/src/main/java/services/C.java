@@ -186,4 +186,10 @@ public class C {
              public static final String titre = "titre";
          }
 
+         public static final class Type_Etablissement{
+            public static final String nomTable="type_etablissement";
+            public static final String id = "id";
+            public static final String type = "type";
+         }
+
 }
