@@ -17,7 +17,7 @@ public class Produit {
     private Float poid;
     private int unite_id;
 
-    public Produit(int id, String nom, int categorie_id, String description, Float prix, boolean estVisible, String reference, Float poid, int unite_id) {
+    public Produit(int id, String nom, int categorie_id, String description, Float prix, String reference, Float poid, int unite_id) {
         this.id = id;
         this.nom = nom;
         this.categorie_id = categorie_id;
