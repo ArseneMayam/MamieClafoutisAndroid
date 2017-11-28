@@ -26,7 +26,7 @@ public class Manager_Produit {
         cv.put(Mydb.Produit.description, produit.getDescription());
         cv.put(Mydb.Produit.prix, produit.getPrix());
         cv.put(Mydb.Produit.poid, produit.getPoid());
-        cv.put(Mydb.Produit.reference, produit.getReference());
+        cv.put(Mydb.Produit.reference, produit.getReference());//
         cv.put(Mydb.Produit.unite_id, produit.getUnite_id());
 
 

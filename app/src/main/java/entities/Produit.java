@@ -29,6 +29,8 @@ public class Produit {
         this.unite_id = unite_id;
     }
 
+
+
     public int getCategorie_id() {
         return categorie_id;
     }

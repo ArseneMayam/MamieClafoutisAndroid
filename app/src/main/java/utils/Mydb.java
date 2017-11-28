@@ -2,7 +2,6 @@ package utils;
 
 import entities.Adresse;
 import entities.Categorie;
-import entities.Etablissement;
 import entities.Role;
 import entities.Type_Etablissement;
 import entities.Unite;
@@ -55,6 +54,12 @@ import entities.Unite;
             public static final String tokenIdentification = "tokenidentification";
             public static final String tokenInscription = "tokeninscription";
 
+        }
+
+        public static final class Role {
+            public static final String nomTable = "role";
+            public static final String id = "id";
+            public static final String denomination = "denomination";
         }
 
     }
