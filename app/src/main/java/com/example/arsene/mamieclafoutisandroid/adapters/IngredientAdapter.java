@@ -1,7 +1,6 @@
-package adapters;
+package com.example.arsene.mamieclafoutisandroid.adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 
 import android.view.LayoutInflater;
 import android.view.View;

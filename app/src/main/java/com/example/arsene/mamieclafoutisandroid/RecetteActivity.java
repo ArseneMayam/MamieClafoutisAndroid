@@ -1,24 +1,15 @@
 package com.example.arsene.mamieclafoutisandroid;
 
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-import adapters.IngredientAdapter;
+import com.example.arsene.mamieclafoutisandroid.adapters.IngredientAdapter;
 import entities.Produit;
 
 public class RecetteActivity extends Activity {

@@ -46,9 +46,11 @@ public class C {
         }
 
         public static final class Commande {
+            public static final String id = "id";
             public static final String nomTable = "commande";
             public static final String utilisateur_id = "utilisateur_id";
             public static final String date = "date";
+            public static final String valide="valide";
         }
 
         public static final class Commande_interne {
@@ -182,6 +184,12 @@ public class C {
              public static final String description = "description";
              public static final String utilisateur_id = "utilisateur_id";
              public static final String titre = "titre";
+         }
+
+         public static final class Type_Etablissement{
+            public static final String nomTable="type_etablissement";
+            public static final String id = "id";
+            public static final String type = "type";
          }
 
 }

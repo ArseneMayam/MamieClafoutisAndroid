@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import entities.Utilisateur;
-import utils.ConnexionRequestHttp;
+import com.example.arsene.mamieclafoutisandroid.utils.ConnexionRequestHttp;
 
 public class ConnexionActivity extends Activity {
 

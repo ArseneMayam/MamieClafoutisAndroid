@@ -61,7 +61,7 @@ public class GestionBase extends SQLiteOpenHelper {
 
     private static final String queryCreateRole = "CREATE TABLE " + C.Role.nomTable + " (" +
             C.Role.id + " INTEGER PRIMARY KEY AUTOINCREMENT , " +
-            C.Role.denomination + " TEXT);";
+            C.Role.titre + " TEXT);";
 
 
     private static final String queryCreateRoleEtablissement = "CREATE TABLE " + C.Role_etablissement.nomTable + " (" +
@@ -73,7 +73,7 @@ public class GestionBase extends SQLiteOpenHelper {
         bd.execSQL(queryCreateEtablissement);
         bd.execSQL(queryCreateAdresse);
         bd.execSQL(queryCreateType);
-        bd.execSQL(queryCreateRole);
+       // bd.execSQL(queryCreateRole);
         bd.execSQL(queryCreateRoleEtablissement);
     }
 

@@ -1,4 +1,4 @@
-package utils;
+package com.example.arsene.mamieclafoutisandroid.utils;
 
 import android.content.Context;
 import android.content.Intent;
