@@ -46,9 +46,11 @@ public class C {
         }
 
         public static final class Commande {
+            public static final String id = "id";
             public static final String nomTable = "commande";
             public static final String utilisateur_id = "utilisateur_id";
             public static final String date = "date";
+            public static final String valide="valide";
         }
 
         public static final class Commande_interne {
