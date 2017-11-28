@@ -14,7 +14,7 @@ public class ConnexionBd {
 
 
     public static SQLiteDatabase getBd(Context ctx){
-        GestionBase gbase = new GestionBase(ctx, C.nomBd, null, versionBD);
+        GestionBase gbase = new GestionBase(ctx, C.nombd, null, versionBD);
         bd = gbase.getWritableDatabase();
         return  bd;
     }
