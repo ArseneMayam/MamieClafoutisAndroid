@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import entities.Utilisateur;
+import utils.ConnexionRequestHttp;
 
 public class ConnexionActivity extends Activity {
 
@@ -15,11 +16,13 @@ public class ConnexionActivity extends Activity {
     EditText inputId;
     EditText inputPwd;
     Button bttnConnexion;
+    ConnexionActivity connexionActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
         ctx =this;
+        connexionActivity = this;
         inputId = (EditText) findViewById(R.id.inputIdentifiant);
         inputPwd = (EditText) findViewById(R.id.inputPwd);
         bttnConnexion = (Button) findViewById(R.id.bttnConnexion);
@@ -34,6 +37,8 @@ public class ConnexionActivity extends Activity {
                 String pwd = inputPwd.getText().toString();
 
                 Utilisateur user = new Utilisateur(id,pwd);
+
+               new ConnexionRequestHttp(ctx,connexionActivity).execute("logIn",user.getUserName(),user.getPassword());
 
             }
         });

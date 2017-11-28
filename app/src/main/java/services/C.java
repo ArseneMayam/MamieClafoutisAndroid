@@ -5,7 +5,7 @@ package services;
  */
 
 public class C {
-    public static String adresseIp="";
+    public static String adresseIp="http://192.168.15.117:8080/mamie_clafoutis_Projet_final/";
 
 
     public static final class Utilisateur {
