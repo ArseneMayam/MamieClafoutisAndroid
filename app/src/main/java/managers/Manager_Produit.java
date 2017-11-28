@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 import entities.Produit;
 import services.ConnexionBd;
-import utils.Mydb;
+import com.example.arsene.mamieclafoutisandroid.utils.Mydb;
 
 /**
  * Created by Been WhereU on 2017-11-26.
