@@ -68,7 +68,7 @@ public class C {
         public static final class Role {
             public static final String nomTable = "role";
             public static final String id = "id";
-            public static final String denomination = "denomination";
+            public static final String titre = "titre";
         }
 
         public static final class Role_etablissement {

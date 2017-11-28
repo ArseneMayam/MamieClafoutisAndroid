@@ -8,12 +8,13 @@ public class Unite {
     int id;
     String denomination;
 
-    // Constructeur
+    // Constructeur Unite
 
 
-    public Unite() {
+    public Unite(int id, String denomination) {
+        this.id = id;
+        this.denomination = denomination;
     }
-
     // Getters et setters
     public int getId() {
         return id;
