@@ -1,11 +1,10 @@
-package utils;
+package com.example.arsene.mamieclafoutisandroid.utils;
 
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import org.json.JSONArray;
-import org.json.JSONException;
+import com.google.gson.Gson;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -23,9 +22,9 @@ import services.C;
  * Created by mayammouarangue on 26/11/17.
  */
 
-public class DownloadDataRequestHttp extends AsyncTask<String,Long,String>{
+public class CategoriesRequestHttp extends AsyncTask<String, Long,String>{
     Context ctx;
-    public DownloadDataRequestHttp(Context ctx) {
+    public CategoriesRequestHttp(Context ctx) {
         this.ctx = ctx;
     }
 
@@ -49,19 +48,18 @@ public class DownloadDataRequestHttp extends AsyncTask<String,Long,String>{
             connection.setDoOutput(true);
             OutputStream os = connection.getOutputStream();
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
-            writer.write("");
+            writer.write(""); // A COMPLETER
             writer.flush();
             writer.close();
 
             int responseCode = connection.getResponseCode();
-            Log.d("test","response code : "+ responseCode);
+            Log.d("test","response code : "+responseCode);
             if (responseCode == HttpURLConnection.HTTP_OK){
                 String line;
                 BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                while ((line = br.readLine()) != null) {
-                    retour += line + "\n";
+                while ((line = br.readLine()) != null){
+                    retour +=line + "\n";
                 }
-
             }
             os.close();
         } catch (MalformedURLException e) {
@@ -71,32 +69,43 @@ public class DownloadDataRequestHttp extends AsyncTask<String,Long,String>{
         }finally {
             connection.disconnect();
         }
+
         return retour;
     }
 
     @Override
     protected void onPostExecute(String s) {
-        Log.d("get","onPostExecute "+ s);
+        Log.d("Get","onPostExecute : "+ s);
 
         if (!s.equals("")){
-            JSONArray jsonArray = null;  // pour recuperer les donnnées
+
+            Gson gson = null;  // pour recuperer le gson
 
             if (!s.equals("-1")){
 
-                try {
-                    jsonArray = new JSONArray(s);
-                    // recuperer les arraylists d'objets seront leur index
-                    //
-                    //
-                    //
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
+                gson = new Gson();
+                //  A Completer
+                //
+                //
+                //
+                //
+                //
 
+            }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

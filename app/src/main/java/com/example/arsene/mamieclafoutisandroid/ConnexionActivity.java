@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import entities.Utilisateur;
-import utils.ConnexionRequestHttp;
+import com.example.arsene.mamieclafoutisandroid.utils.ConnexionRequestHttp;
 
 public class ConnexionActivity extends Activity {
 
@@ -38,7 +38,7 @@ public class ConnexionActivity extends Activity {
 
                 Utilisateur user = new Utilisateur(id,pwd);
 
-               new ConnexionRequestHttp(ctx,connexionActivity).execute("logIn",user.getUserName(),user.getPassword());
+               new ConnexionRequestHttp(ctx,connexionActivity).execute("login",user.getUserName(),user.getPassword());
 
             }
         });

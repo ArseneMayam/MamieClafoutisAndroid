@@ -11,7 +11,7 @@ public class Ingredient {
     private int quantite;
     private int unite_ingredient;
 
-    //constructeur
+    //constructeur Ingredient
     public Ingredient(int id, String denomination, int quantite, int unite_ingredient) {
         this.id = id;
         this.denomination = denomination;

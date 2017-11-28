@@ -1,4 +1,4 @@
-package utils;
+package com.example.arsene.mamieclafoutisandroid.utils;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -22,18 +22,17 @@ import services.C;
  * Created by mayammouarangue on 26/11/17.
  */
 
-public class CategoriesRequestHttp extends AsyncTask<String, Long,String>{
+public class VentesRequestHttp extends AsyncTask<String,Long,String> {
     Context ctx;
-    public CategoriesRequestHttp(Context ctx) {
+    public VentesRequestHttp(Context ctx) {
         this.ctx = ctx;
     }
 
     @Override
     protected String doInBackground(String... strings) {
-        String retour ="";
+        String retour = "";
         HttpURLConnection connection = null;
         StringBuilder sb = new StringBuilder();
-
         String requestURL = C.adresseIp; // A COMPLETER
 
         URL url = null;
@@ -48,17 +47,17 @@ public class CategoriesRequestHttp extends AsyncTask<String, Long,String>{
             connection.setDoOutput(true);
             OutputStream os = connection.getOutputStream();
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
-            writer.write(""); // A COMPLETER
+            writer.write(""); // A REVOIR
             writer.flush();
             writer.close();
 
             int responseCode = connection.getResponseCode();
-            Log.d("test","response code : "+responseCode);
+            Log.d("test","response code "+ responseCode);
             if (responseCode == HttpURLConnection.HTTP_OK){
                 String line;
                 BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                 while ((line = br.readLine()) != null){
-                    retour +=line + "\n";
+                    retour += line +"\n";
                 }
             }
             os.close();
@@ -75,26 +74,26 @@ public class CategoriesRequestHttp extends AsyncTask<String, Long,String>{
 
     @Override
     protected void onPostExecute(String s) {
-        Log.d("Get","onPostExecute : "+ s);
+        Log.d("Get","onPostExecute "+ s);
 
         if (!s.equals("")){
 
-            Gson gson = null;  // pour recuperer le gson
+            Gson gson = null;
 
             if (!s.equals("-1")){
 
-                gson = new Gson();
-                //  A Completer
+                gson = new Gson(); 
+                // A COMPLETER
                 //
                 //
                 //
                 //
-                //
-
             }
         }
     }
 }
+
+
 
 
 

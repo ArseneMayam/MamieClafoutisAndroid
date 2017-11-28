@@ -7,26 +7,25 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
-import entities.Categorie;
+import entities.Unite;
 import services.C;
 import services.ConnexionBd;
 
 /**
- * Created by mayammouarangue on 28/11/17.
+ * Created by Been WhereU on 2017-11-28.
  */
 
-public class ManagerCategorie {
-
-    public static void insert(Context ctx, Categorie categorie){
+public class Manager_unite {
+    public static void insertUnite(Context ctx, Unite unite){
         ContentValues cv = new ContentValues();
-        cv.put(C.Categorie.denomination,categorie.getDenomination());
+        cv.put(C.Unite.denomination,unite.getDenomination());
         SQLiteDatabase bd = ConnexionBd.getBd(ctx);
         bd.insert(C.Categorie.nomTable,null,cv);
     }
 
-    public static ArrayList<Categorie> getAll(Context ctx){
-        ArrayList<Categorie> retour = new ArrayList<>();
-        String query = "select * from "+C.Categorie.nomTable+";";
+    public static ArrayList<Unite> getAllUnite(Context ctx){
+        ArrayList<Unite> retour = new ArrayList<>();
+        String query = "select * from "+C.Unite.nomTable+";";
 
         SQLiteDatabase bd = ConnexionBd.getBd(ctx);
         Cursor c = bd.rawQuery(query,null);
@@ -35,36 +34,10 @@ public class ManagerCategorie {
 
             int id = c.getInt(0);
             String denomination = c.getString(1);
-
-            Categorie categorie = new Categorie(id,denomination);
-            retour.add(categorie);
+            Unite unit = new Unite(id,denomination);
+            retour.add(unit);
         }
-
-
         return retour;
     }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
