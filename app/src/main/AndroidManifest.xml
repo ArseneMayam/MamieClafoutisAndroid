@@ -15,19 +15,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".InscriptionActivity">
+
+         
+        <activity android:name=".ConnexionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ConnexionActivity" />
         <activity android:name=".CommandeActivity" />
         <activity android:name=".RecetteActivity"></activity>
         <activity android:name=".BoutiqueCuisinie"></activity>
         <activity android:name=".BoutiqueCorporate" />
+        <activity android:name=".BoutiqueActivity" />
+
     </application>
 
 </manifest>
