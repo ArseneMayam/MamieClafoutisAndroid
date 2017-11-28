@@ -61,7 +61,7 @@ public class GestionBase extends SQLiteOpenHelper {
 
     private static final String queryCreateRole = "CREATE TABLE " + C.Role.nomTable + " (" +
             C.Role.id + " INTEGER PRIMARY KEY AUTOINCREMENT , " +
-            C.Role.denomination + " TEXT);";
+            C.Role.titre + " TEXT);";
 
 
     private static final String queryCreateRoleEtablissement = "CREATE TABLE " + C.Role_etablissement.nomTable + " (" +
