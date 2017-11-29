@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.arsene.mamieclafoutisandroid.adapters.IngredientAdapter;
-import entities.Produit;
+import com.example.arsene.mamieclafoutisandroid.entities.Produit;
 
 public class RecetteActivity extends Activity {
 

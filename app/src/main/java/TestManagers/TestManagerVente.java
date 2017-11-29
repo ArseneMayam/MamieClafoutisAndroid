@@ -1,10 +1,8 @@
 package TestManagers;
 
-import com.example.arsene.mamieclafoutisandroid.Vente;
-
 import java.util.ArrayList;
 
-import entities.Ventes;
+import com.example.arsene.mamieclafoutisandroid.entities.Ventes;
 
 /**
  * Created by mayammouarangue on 28/11/17.

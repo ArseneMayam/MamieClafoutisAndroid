@@ -2,7 +2,7 @@ package TestManagers;
 
 import java.util.ArrayList;
 
-import entities.Commande;
+import com.example.arsene.mamieclafoutisandroid.entities.Commande;
 
 /**
  * Created by mayammouarangue on 28/11/17.
