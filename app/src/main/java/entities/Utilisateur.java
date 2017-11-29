@@ -23,8 +23,7 @@ public class Utilisateur {
 //private int role_id;
 
     // contructeurs
-
-
+    
     public Utilisateur(int id, String nom, String prenom, Etablissement etablissement, Role role, String userName, String password, boolean isVisible, String tokenIdentification, String tokenInscription) {
         this.id = id;
         this.nom = nom;
