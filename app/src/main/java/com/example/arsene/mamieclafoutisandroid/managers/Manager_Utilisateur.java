@@ -1,4 +1,4 @@
-package managers;
+package com.example.arsene.mamieclafoutisandroid.managers;
 
 /**
  * Created by Been WhereU on 2017-11-26.

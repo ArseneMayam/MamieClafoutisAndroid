@@ -6,8 +6,8 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.arsene.mamieclafoutisandroid.BoutiqueActivity;
 import com.example.arsene.mamieclafoutisandroid.ConnexionActivity;
+import com.example.arsene.mamieclafoutisandroid.ProduitActivity;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -21,8 +21,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 
-import entities.Utilisateur;
-import services.C;
+import com.example.arsene.mamieclafoutisandroid.entities.Utilisateur;
+import com.example.arsene.mamieclafoutisandroid.services.C;
 
 /**
  * Created by mayammouarangue on 25/11/17.
@@ -118,7 +118,8 @@ public class ConnexionRequestHttp extends AsyncTask<String, Long, String>{
 
 
                 Intent intent = new Intent();
-                intent.setClass(ctx, BoutiqueActivity.class);
+                intent.setClass(ctx, ProduitActivity.class);
+                //intent.setClass(ctx, BoutiqueActivity.class); a decommenter apres les test ...
                 ctx.startActivity(intent);
                 connexionActivity.finish();
             }

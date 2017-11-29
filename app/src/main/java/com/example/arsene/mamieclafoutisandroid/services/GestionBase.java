@@ -1,4 +1,4 @@
-package services;
+package com.example.arsene.mamieclafoutisandroid.services;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
