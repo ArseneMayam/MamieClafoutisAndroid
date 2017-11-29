@@ -8,16 +8,45 @@ public class Produit {
     //attributs
     private int id;
     private String nom;
-    private Categorie categorie;
+   // private Categorie categorie;
+    private int categorie_id;
     private String description;
     private Float prix;
     private boolean estVisible;
     private String reference;
     private Float poid;
-    private Unite unite;
+    private int unite_id;
 
+    public Produit(int id, String nom, int categorie_id, String description, Float prix, String reference, Float poid, int unite_id) {
+        this.id = id;
+        this.nom = nom;
+        this.categorie_id = categorie_id;
+        this.description = description;
+        this.prix = prix;
+        this.estVisible = estVisible;
+        this.reference = reference;
+        this.poid = poid;
+        this.unite_id = unite_id;
+    }
 
-    //constructeur
+    public Produit(String nom, String description, Float prix, String reference, Float poid, int unite_id) {
+        this.nom = nom;
+        this.description = description;
+        this.prix = prix;
+        this.reference = reference;
+        this.poid = poid;
+        this.unite_id = unite_id;
+    }
+
+    public int getCategorie_id() {
+        return categorie_id;
+    }
+
+    public void setCategorie_id(int categorie_id) {
+        this.categorie_id = categorie_id;
+    }
+
+//constructeur
 
 
 
@@ -55,13 +84,7 @@ public class Produit {
         this.reference = reference;
     }
 
-    public Categorie getCategorie() {
-        return categorie;
-    }
 
-    public void setCategorie(Categorie categorie) {
-        this.categorie = categorie;
-    }
 
     public Float getPrix() {
         return prix;
@@ -87,11 +110,11 @@ public class Produit {
         this.poid = poid;
     }
 
-    public Unite getUnite() {
-        return unite;
+    public int getUnite_id() {
+        return unite_id;
     }
 
-    public void setUnite(Unite unite) {
-        this.unite = unite;
+    public void setUnite_id(int unite_id) {
+        this.unite_id = unite_id;
     }
 }
