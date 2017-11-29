@@ -45,7 +45,7 @@ public class Utilisateur {
 
     public Utilisateur(String tokenIdentification){
         this.tokenIdentification = tokenIdentification;
-    }
+    } 
 
     //getters and setters
     public int getId() {
