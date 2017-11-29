@@ -35,13 +35,14 @@ public class GestionBase extends SQLiteOpenHelper {
     private static final String queryDropVente = "DROP TABLE IF EXISTS" + C.Ventes.nomTable + ";";
     private static final String queryDropProduitPropose = "DROP TABLE IF EXISTS" + C.Produit_propose.nomTable + ";";
 
-    /*private static final String queryCreateEtablissement = "CREATE TABLE " + C.Etablissement.nomTable + " (" +
+
+    private static final String queryCreateEtablissement = "CREATE TABLE " + C.Etablissement.nomTable + " (" +
             C.Etablissement.id + " INTEGER PRIMARY KEY AUTOINCREMENT , " +
             C.Etablissement.name + " TEXT , " +
             C.Etablissement.tel + " TEXT , " +
             C.Etablissement.type_id + " INTEGER , " +
             C.Etablissement.adresse_id + " INTEGER , " +
-            C.Etablissement.isVisible + " INTEGER);";*/
+            C.Etablissement.isVisible + " INTEGER);";
 
 
     private static final String queryCreateAdresse = "CREATE TABLE " + C.Adresse.nomTable + " (" +
@@ -69,7 +70,7 @@ public class GestionBase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase bd) {
-        //bd.execSQL(queryCreateEtablissement);
+        bd.execSQL(queryCreateEtablissement);
         bd.execSQL(queryCreateAdresse);
         bd.execSQL(queryCreateType);
        // bd.execSQL(queryCreateRole);

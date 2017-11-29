@@ -4,8 +4,6 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.google.gson.Gson;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -19,7 +17,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import entities.Produit;
 import services.C;
 
 /**
@@ -28,13 +25,6 @@ import services.C;
 
 public class DownloadDataRequestHttp extends AsyncTask<String,Long,String>{
     Context ctx;
-    Produit produit;
-
-    public DownloadDataRequestHttp(Context ctx, Produit produit) {
-        this.ctx = ctx;
-        this.produit = produit;
-    }
-
     public DownloadDataRequestHttp(Context ctx) {
         this.ctx = ctx;
     }
@@ -42,18 +32,14 @@ public class DownloadDataRequestHttp extends AsyncTask<String,Long,String>{
     @Override
     protected String doInBackground(String... strings) {
         String retour ="";
-
         HttpURLConnection connection = null;
         StringBuilder sb = new StringBuilder();
 
-        String requestURL = C.urlGetProduitId; // A COMPLETER
-        Log.d("produitId",requestURL);
+        String requestURL = C.adresseIp; // A COMPLETER
 
         URL url = null;
 
         try {
-            Gson gson = new Gson();
-            String produitRceiver = gson.toJson(produit);
             url = new URL(requestURL);
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
@@ -61,8 +47,6 @@ public class DownloadDataRequestHttp extends AsyncTask<String,Long,String>{
             connection.setConnectTimeout(15000);
             connection.setDoInput(true);
             connection.setDoOutput(true);
-            connection.setRequestProperty("Connection","Keep-Alive");
-            connection.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
             OutputStream os = connection.getOutputStream();
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
             writer.write("");
@@ -101,8 +85,6 @@ public class DownloadDataRequestHttp extends AsyncTask<String,Long,String>{
 
                 try {
                     jsonArray = new JSONArray(s);
-                    Log.d("json",jsonArray.toString());
-
                     // recuperer les arraylists d'objets seront leur index
                     //
                     //

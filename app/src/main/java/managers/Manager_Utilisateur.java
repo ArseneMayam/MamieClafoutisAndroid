@@ -27,7 +27,7 @@ public class Manager_Utilisateur {
         cv.put(Mydb.Utilisateur.prenom, utilisateur.getPrenom());
         cv.put(Mydb.Utilisateur.userName, utilisateur.getUserName());
         cv.put(Mydb.Utilisateur.password, utilisateur.getPassword());
-       // cv.put(Mydb.Utilisateur.role, utilisateur.getRoleid());
+        cv.put(Mydb.Utilisateur.role, utilisateur.getRoleid());
         cv.put(Mydb.Utilisateur.tokenIdentification, utilisateur.getTokenIdentification());
         cv.put(Mydb.Utilisateur.tokenInscription, utilisateur.getTokenInscription());
         cv.put(Mydb.Utilisateur.isvisible, utilisateur.isVisible());
@@ -58,8 +58,8 @@ public class Manager_Utilisateur {
             String tokeninscription = c.getString(7);
             String visible = c.getString(8);
 
-           // Utilisateur s = new Utilisateur(id, nom, prenom, username, password, role, tokenid,  tokeninscription , visible);
-           // retour.add(s);
+            Utilisateur s = new Utilisateur(id, nom, prenom, username, password, role, tokenid,  tokeninscription , visible);
+            retour.add(s);
         }
         return retour;
 

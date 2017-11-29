@@ -117,6 +117,7 @@ public class ConnexionRequestHttp extends AsyncTask<String, Long, String>{
                 Utilisateur utilisateur = gson.fromJson(s,Utilisateur.class);
                 Log.d("test","login user "+utilisateur.getUserName());
 
+
                 Intent intent = new Intent();
                 intent.setClass(ctx, ProduitActivity.class);
                 //intent.setClass(ctx, BoutiqueActivity.class);
