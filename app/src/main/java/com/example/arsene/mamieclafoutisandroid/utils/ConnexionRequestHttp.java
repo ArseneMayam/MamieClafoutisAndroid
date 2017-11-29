@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.example.arsene.mamieclafoutisandroid.BoutiqueActivity;
 import com.example.arsene.mamieclafoutisandroid.ConnexionActivity;
+import com.example.arsene.mamieclafoutisandroid.ProduitActivity;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -116,9 +117,9 @@ public class ConnexionRequestHttp extends AsyncTask<String, Long, String>{
                 Utilisateur utilisateur = gson.fromJson(s,Utilisateur.class);
                 Log.d("test","login user "+utilisateur.getUserName());
 
-
                 Intent intent = new Intent();
-                intent.setClass(ctx, BoutiqueActivity.class);
+                intent.setClass(ctx, ProduitActivity.class);
+                //intent.setClass(ctx, BoutiqueActivity.class);
                 ctx.startActivity(intent);
                 connexionActivity.finish();
             }

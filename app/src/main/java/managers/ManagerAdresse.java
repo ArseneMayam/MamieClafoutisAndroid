@@ -17,6 +17,8 @@ import services.ConnexionBd;
 
 public class ManagerAdresse {
 
+    private static final String queryGetAll = "";
+
     private static void insert(Context ctx, Adresse adresse){
 
         ContentValues cv = new ContentValues();
@@ -50,5 +52,7 @@ public class ManagerAdresse {
 
         return retour;
     }
+
+
 
 }

@@ -43,6 +43,7 @@ package com.example.arsene.mamieclafoutisandroid.utils;
             //  public static final String etablissement_id;
             public static final String etablissement = "etablissement";
             public static final String role = "role";
+            public static final String isvisible = "visible";
             public static final String userName = "username";
             public static final String password = "password";
             public static final String tokenIdentification = "tokenidentification";

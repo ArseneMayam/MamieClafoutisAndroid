@@ -39,7 +39,6 @@ public class Manager_Produit {
 
 
 
-
     public static ArrayList<Produit> getAll(Context ctx) {
         ArrayList<Produit> retour = new ArrayList<>();
 
@@ -60,6 +59,8 @@ public class Manager_Produit {
             //String unite = c.getString(7);
             Produit s = new Produit(id, nom, categorie_id, description, prix,reference, poid,  unite_id);
             retour.add(s);
+            //Produit s = new Produit(id, nom, categorie, description, prix, poid, reference, unite);   type objet unite et categorie
+            //retour.add(s);
         }
         return retour;
 
