@@ -27,10 +27,7 @@ public class Manager_Utilisateur {
         cv.put(Mydb.Utilisateur.prenom, utilisateur.getPrenom());
         cv.put(Mydb.Utilisateur.userName, utilisateur.getUserName());
         cv.put(Mydb.Utilisateur.password, utilisateur.getPassword());
-        cv.put(Mydb.Utilisateur.role, utilisateur.getRoleid());
         cv.put(Mydb.Utilisateur.tokenIdentification, utilisateur.getTokenIdentification());
-        cv.put(Mydb.Utilisateur.tokenInscription, utilisateur.getTokenInscription());
-        cv.put(Mydb.Utilisateur.isvisible, utilisateur.isVisible());
 
         SQLiteDatabase bd = ConnexionBd.getBd(ctx);
         bd.insert(Mydb.Produit.tablename, null, cv);
@@ -53,12 +50,9 @@ public class Manager_Utilisateur {
             String prenom = c.getString(2);
             String username = c.getString(3);
             String password = c.getString(4);
-            int role = c.getInt(5);
-            String tokenid = c.getString(6);
-            String tokeninscription = c.getString(7);
-            String visible = c.getString(8);
+            String tokenid = c.getString(5);
 
-            Utilisateur s = new Utilisateur(id, nom, prenom, username, password, role, tokenid,  tokeninscription , visible);
+            Utilisateur s = new Utilisateur(id, nom, prenom, username, password, tokenid);
             retour.add(s);
         }
         return retour;
