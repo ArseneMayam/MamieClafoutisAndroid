@@ -5,8 +5,6 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.example.arsene.mamieclafoutisandroid.ConnexionActivity;
-import com.example.arsene.mamieclafoutisandroid.ProduitActivity;
-import com.google.gson.Gson;
 
 import java.net.HttpURLConnection;
 
@@ -20,15 +18,13 @@ import services.C;
 public class ProduitRequestHttp extends AsyncTask<String,Long,String> {
 
     Context ctx;
-    ProduitActivity produitActivity;
+    ConnexionActivity connexionActivity;
     Produit produit;
 
-    public ProduitRequestHttp(Context ctx, ProduitActivity produitActivity, Produit produit) {
+    public ProduitRequestHttp(Context ctx, ConnexionActivity connexionActivity) {
         this.ctx = ctx;
-        this.produitActivity = produitActivity;
-        this.produit = produit;
+        this.connexionActivity = connexionActivity;
     }
-
 
     @Override
     protected String doInBackground(String... strings) {
@@ -38,11 +34,6 @@ public class ProduitRequestHttp extends AsyncTask<String,Long,String> {
 
         String requestURL = C.adresseIp+strings[0];
         Log.d("Produit",requestURL);
-
-
-            Gson gson = new Gson();
-            String produitView = gson.toJson(produitActivity);
-
 
 
 
