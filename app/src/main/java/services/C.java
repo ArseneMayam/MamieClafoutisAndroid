@@ -12,14 +12,16 @@ public class C {
 
     public static final String nombd = "";
 
+    public static String nomBd="clafoutis";
 
 
     public static final class Utilisateur {
         public static final String nomTable = "utilisateur";
         public static final String id = "id";
         public static final String nom = "nom";
-        public static final String etablissement_id = "etablissement_id";
-        public static final String role_id = "role_id";
+        public static final String prenom = "prenom";
+        public static final String etablissement = "Etablissement"; //Entite Etablissement
+        public static final String Role = "Role"; //Entite Role
         public static final String userName = "userName";
         public static final String password = "password";
         public static final String isVisible = "isVisible";
@@ -43,7 +45,12 @@ public class C {
             public static final String name = "name";
             public static final String tel = "tel";
             public static final String type_id = "type_id";
-            public static final String adresse_id = "adresse_id";
+            public static final String numero_rue = "numero_rue";
+            public static final String nom_rue = "nom_rue";
+            public static final String ville = "ville";
+            public static final String province = "province";
+            public static final String code_postale = "code_postale";
+            public static final String pays = "pays";
             public static final String isVisible = "isVisible";
         }
 
@@ -187,6 +194,35 @@ public class C {
              public static final String utilisateur_id = "utilisateur_id";
              public static final String titre = "titre";
          }
+
+
+        public static final class role {
+            public static final String nomTable = "role";
+            public static final String id = "id";
+            public static final String titre = "titre";
+        }
+        public static final class role_etablissement {
+            public static final String nomTable = "role_etablissement";
+            public static final String type_id = "type_id";
+            public static final String role_id = "role_id";
+        }
+
+
+        public static final class categorie {
+            public static final String nomTable = "categorie";
+            public static final String id = "id";
+            public static final String denomination = "denomination";
+        }
+
+
+    public static final class produit_propose {
+        public static final String nomTable = "produit_propose";
+        public static final String id = "id";
+        public static final String description = "description";
+        public static final String date = "date";
+        public static final String utilisateur_id = "utilisateur_id";
+        public static final String titre = "titre";
+    }
 
          public static final class Type_Etablissement{
             public static final String nomTable="type_etablissement";
