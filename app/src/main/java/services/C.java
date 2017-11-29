@@ -8,6 +8,8 @@ public class C {
 
     public static String adresseIp="http://192.168.15.117:8080/mamie_clafoutis_Projet_final/";
 
+    public static String urlGetProduits="http://192.168.15.117:8080/mamie_clafoutis_Projet_final/GestionProduit";
+
     public static final String nombd = "";
 
 
