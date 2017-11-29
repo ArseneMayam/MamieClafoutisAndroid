@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
-import entities.Ingredient;
+import com.example.arsene.mamieclafoutisandroid.entities.Ingredient;
 import services.C;
 import services.ConnexionBd;
 

@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
-import entities.Commande;
+import com.example.arsene.mamieclafoutisandroid.entities.Commande;
 import services.C;
 import services.ConnexionBd;
 
