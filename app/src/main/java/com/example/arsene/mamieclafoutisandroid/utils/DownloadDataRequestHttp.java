@@ -35,7 +35,7 @@ public class DownloadDataRequestHttp extends AsyncTask<String,Long,String>{
         HttpURLConnection connection = null;
         StringBuilder sb = new StringBuilder();
 
-        String requestURL = C.adresseIp; // A COMPLETER
+        String requestURL = C.urlGetProduits; // A COMPLETER
 
         URL url = null;
 
