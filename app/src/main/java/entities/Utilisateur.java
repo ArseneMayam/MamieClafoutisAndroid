@@ -24,6 +24,16 @@ public class Utilisateur {
 
     // contructeurs
 
+
+    public Utilisateur(int id, String nom, String prenom, String userName, String password, String tokenIdentification) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.userName = userName;
+        this.password = password;
+        this.tokenIdentification = tokenIdentification;
+    }
+
     public Utilisateur(int id, String nom, String prenom, Etablissement etablissement, Role role, String userName, String password, boolean isVisible, String tokenIdentification, String tokenInscription) {
         this.id = id;
         this.nom = nom;
