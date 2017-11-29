@@ -1,4 +1,4 @@
-package adapters;
+package com.example.arsene.mamieclafoutisandroid.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;

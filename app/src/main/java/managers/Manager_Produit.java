@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 import entities.Produit;
 import services.ConnexionBd;
-import utils.Mydb;
+import com.example.arsene.mamieclafoutisandroid.utils.Mydb;
 
 /**
  * Created by Been WhereU on 2017-11-26.
@@ -26,7 +26,7 @@ public class Manager_Produit {
         cv.put(Mydb.Produit.description, produit.getDescription());
         cv.put(Mydb.Produit.prix, produit.getPrix());
         cv.put(Mydb.Produit.poid, produit.getPoid());
-        cv.put(Mydb.Produit.reference, produit.getReference());
+        cv.put(Mydb.Produit.reference, produit.getReference());//
         cv.put(Mydb.Produit.unite_id, produit.getUnite_id());
 
 
