@@ -47,7 +47,7 @@ public class Utilisateur {
 
     public Utilisateur(int id, String nom, String prenom, String username, String password, int role, String tokenid, String tokeninscription, String tokenIdentification){
         this.tokenIdentification = tokenIdentification;
-    }
+    } 
 
     //getters and setters
     public int getId() {
