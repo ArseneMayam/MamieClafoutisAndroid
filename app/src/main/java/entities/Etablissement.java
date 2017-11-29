@@ -24,8 +24,12 @@ public class Etablissement {
         this.isVisible = isVisible;
     }
 
-
-    // getters and setters
+    public Etablissement(int id, String name, String tel) {
+        this.id = id;
+        this.name = name;
+        this.tel = tel;
+    }
+// getters and setters
 
     public int getId() {
         return id;
