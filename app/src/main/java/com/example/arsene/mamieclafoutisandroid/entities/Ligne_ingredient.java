@@ -1,4 +1,4 @@
-package entities;
+package com.example.arsene.mamieclafoutisandroid.entities;
 
 /**
  * Created by mayammouarangue on 24/11/17.

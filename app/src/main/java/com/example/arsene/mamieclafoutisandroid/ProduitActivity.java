@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 public class ProduitActivity extends Activity {
     Context ctx;
+    ProduitActivity produitActivity;
 
 
     @Override
@@ -13,5 +14,6 @@ public class ProduitActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_produit);
         ctx = this;
+        produitActivity = this;
     }
 }

@@ -1,4 +1,4 @@
-package managers;
+package com.example.arsene.mamieclafoutisandroid.managers;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 
 import com.example.arsene.mamieclafoutisandroid.entities.Produit;
-import services.ConnexionBd;
+import com.example.arsene.mamieclafoutisandroid.services.ConnexionBd;
 import com.example.arsene.mamieclafoutisandroid.utils.Mydb;
 
 /**

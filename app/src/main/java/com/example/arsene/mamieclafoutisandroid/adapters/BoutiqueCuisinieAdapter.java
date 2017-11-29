@@ -12,7 +12,7 @@ import com.example.arsene.mamieclafoutisandroid.R;
 
 import java.util.List;
 
-import entities.Produit;
+import com.example.arsene.mamieclafoutisandroid.entities.Produit;
 
 /**
  * Created by mayammouarangue on 27/11/17.
