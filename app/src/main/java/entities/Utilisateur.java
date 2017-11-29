@@ -13,7 +13,6 @@ public class Utilisateur {
   //  private int etablissement_id;
     private Etablissement etablissement;
     private Role role;
-    private int roleid;
     private String userName;
     private String password;
     private boolean isVisible;
@@ -25,14 +24,12 @@ public class Utilisateur {
 
     // contructeurs
 
-
-    public Utilisateur(int id, String nom, String prenom, Etablissement etablissement, Role role, int roleid, String userName, String password, boolean isVisible, String tokenIdentification, String tokenInscription) {
+    public Utilisateur(int id, String nom, String prenom, Etablissement etablissement, Role role, String userName, String password, boolean isVisible, String tokenIdentification, String tokenInscription) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.etablissement = etablissement;
         this.role = role;
-        this.roleid = roleid;
         this.userName = userName;
         this.password = password;
         this.isVisible = isVisible;
@@ -45,10 +42,9 @@ public class Utilisateur {
         this.password = password;
     }
 
-    public Utilisateur(int id, String nom, String prenom, String username, String password, int role, String tokenid, String tokeninscription, String tokenIdentification){
+    public Utilisateur(String tokenIdentification){
         this.tokenIdentification = tokenIdentification;
-    } 
-
+    }
     //getters and setters
     public int getId() {
         return id;
@@ -124,8 +120,6 @@ public class Utilisateur {
     public Role getRole() {
         return role;
     }
-
-    public int getRoleid(){ return roleid;}
 
     public void setRole(Role role) {
         this.role = role;
