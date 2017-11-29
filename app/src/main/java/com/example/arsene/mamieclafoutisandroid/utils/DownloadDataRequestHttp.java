@@ -17,7 +17,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import com.example.arsene.mamieclafoutisandroid.services.C;
+import services.C;
 
 /**
  * Created by mayammouarangue on 26/11/17.

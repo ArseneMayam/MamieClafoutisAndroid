@@ -4,17 +4,12 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
+import com.example.arsene.mamieclafoutisandroid.ConnexionActivity;
 
-import com.example.arsene.mamieclafoutisandroid.services.C;
+import java.net.HttpURLConnection;
+
+import entities.Produit;
+import services.C;
 
 /**
  * Created by Been WhereU on 2017-11-28.
@@ -23,64 +18,25 @@ import com.example.arsene.mamieclafoutisandroid.services.C;
 public class ProduitRequestHttp extends AsyncTask<String,Long,String> {
 
     Context ctx;
+    ConnexionActivity connexionActivity;
+    Produit produit;
 
-    public ProduitRequestHttp(Context ctx) {
+    public ProduitRequestHttp(Context ctx, ConnexionActivity connexionActivity) {
         this.ctx = ctx;
+        this.connexionActivity = connexionActivity;
     }
 
     @Override
     protected String doInBackground(String... strings) {
         String retour ="";
-        HttpURLConnection connection = null;
+        HttpURLConnection connexion = null;
         StringBuilder stbuilder = new StringBuilder();
 
-        String requestURL = C.adresseIp; //Mettre le lien...
+        String requestURL = C.adresseIp+strings[0];
         Log.d("Produit",requestURL);
 
-        // le url
-        URL url = null;
-
-        try {
-
-            url = new URL(requestURL);
-            connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("POST");
-            connection.setReadTimeout(15000);
-            connection.setConnectTimeout(15000);
-            connection.setDoInput(true);
-            connection.setDoOutput(true);
-            connection.setRequestProperty("Connection","Keep-Alive");
-            connection.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
-
-            OutputStream os = connection.getOutputStream();
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os,"UTF-8"));
-            writer.write(s);
-            writer.flush();
-            writer.close();
-
-            int responseCode = connection.getResponseCode();
-            Log.d("test","responseCode : "+responseCode);
-
-            if (responseCode == HttpURLConnection.HTTP_OK){
-                String line;
-                BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-
-                while ( (line = br.readLine())!=null){
-                    retour += line+"\n";
-                }
-            }
-            os.close();
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }finally {
-            connection.disconnect();
-        }
 
 
-        return retour;
+        return null;
     }
-
 }
