@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.arsene.mamieclafoutisandroid.adapters.CommandeAdapter;
-import com.example.arsene.mamieclafoutisandroid.entities.Produit;
+import entities.Produit;
 
 public class CommandeActivity extends AppCompatActivity {
 

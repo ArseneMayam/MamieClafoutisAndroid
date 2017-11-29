@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.example.arsene.mamieclafoutisandroid.R;
 
-import com.example.arsene.mamieclafoutisandroid.entities.Ingredient;
+import entities.Ingredient;
 
 /**
  * Created by bigg- on 11/27/2017.
