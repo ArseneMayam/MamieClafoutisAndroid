@@ -19,8 +19,7 @@ public class Utilisateur {
     private String tokenIdentification;
     private String tokenInscription;
 
-
-//private int role_id;
+    
 
     // contructeurs
 

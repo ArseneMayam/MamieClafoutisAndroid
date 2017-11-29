@@ -52,7 +52,6 @@ public class Manager_Utilisateur {
             String password = c.getString(4);
             String tokenid = c.getString(5);
 
-
             Utilisateur s = new Utilisateur(id, nom, prenom, username, password, tokenid);
             retour.add(s);
         }
