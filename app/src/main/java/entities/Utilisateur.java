@@ -24,7 +24,6 @@ public class Utilisateur {
 
     // contructeurs
 
-
     public Utilisateur(int id, String nom, String prenom, Etablissement etablissement, Role role, String userName, String password, boolean isVisible, String tokenIdentification, String tokenInscription) {
         this.id = id;
         this.nom = nom;
@@ -46,7 +45,6 @@ public class Utilisateur {
     public Utilisateur(String tokenIdentification){
         this.tokenIdentification = tokenIdentification;
     }
-
     //getters and setters
     public int getId() {
         return id;
